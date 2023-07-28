@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robô da Tabuada</title>
+</head>
+<body>
+    
+    <script>
+        
+        let num = parseInt(prompt("Digite um número para ver a tabuada: "));
+
+        let tabuada = `A tabuada de 0 até 20 do número ${num}:`;
+
+        for (let multiplo = 0; multiplo <= 20; multiplo++) {
+            let resultado = num * multiplo;
+
+            tabuada += (`\n${num} * ${multiplo} = ${resultado}`)
+            
+        }
+
+        alert(`${tabuada}`)
+    </script>
+
+</body>
+</html>
