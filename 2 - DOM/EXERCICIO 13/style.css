@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+
+    margin-bottom: 32px;
+
+
+}
+
+
+
+
+main {
+    display: none;
+    margin: auto;
+    width: fit-content;
+}
+
+section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* pointer-events: none; */
+    
+}
+
+
+
+
+
