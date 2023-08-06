@@ -7,6 +7,7 @@ let footer = document.getElementById('footer')
 let nomes = document.getElementById("nomes")
 let square = document.querySelectorAll("square")
 let reiniciar = document.createElement('button')
+let parar = document.getElementById("parar")
 
 
 //Pegando os quadrados
@@ -51,7 +52,7 @@ let container = document.getElementById("inputs")
 let div1 = document.createElement('div')
 div1.style.marginBottom = "10px"
 let label1 = document.createElement('label')
-label1.innerText = "Jogador1 - x"
+label1.innerText = "Jogador1 - ✖️"
 label1.style.marginRight = "5px"
 let input1 = document.createElement('input')
 input1.type = "text"
@@ -59,7 +60,7 @@ div1.append(label1, input1)
 
 let div2 = document.createElement('div')
 let label2 = document.createElement('label')
-label2.innerText = "Jogador2 - o"
+label2.innerText = "Jogador2 - ⭕"
 label2.style.marginRight = "5px"
 let input2 = document.createElement('input')
 input2.type = "text"
@@ -99,14 +100,14 @@ function handleClick (event) {
 
     if(local.textContent === "" && JogadorDaVez === "x"){
 
-        local.innerText = "xxxx"
+        local.innerText = "✖️"
         divAlternandoNomes.innerText = input1.value
         container.append(divAlternandoNomes)
         JogadorDaVez = "o"
 
     }  else if (local.textContent === "" && JogadorDaVez === "o"){
 
-        local.innerText = "ooooo"
+        local.innerText = "⭕"
         divAlternandoNomes.innerText = input2.value
         container.append(divAlternandoNomes)
         JogadorDaVez = "x"
@@ -130,25 +131,30 @@ function verificarGanhador () {
     
 
     if (square1.textContent != "" && square1.textContent === square2.textContent && square1.textContent === square3.textContent){
-        square1.style.backgroundColor = "red"
-        square2.style.backgroundColor = "red"
-        square3.style.backgroundColor = "red"
+        square1.style.backgroundColor = "green"
+        square2.style.backgroundColor = "green"
+        square3.style.backgroundColor = "green"
         
         nomeDoVencedor()
+        parar.style.pointerEvents= "none";
 
         
         
     } else if (square4.textContent != "" && square4.textContent === square5.textContent && square4.textContent === square6.textContent) {
-        square4.style.backgroundColor = "red"
-        square5.style.backgroundColor = "red"
-        square6.style.backgroundColor = "red"
+        square4.style.backgroundColor = "green"
+        square5.style.backgroundColor = "green"
+        square6.style.backgroundColor = "green"
         
         nomeDoVencedor()
+        parar.style.pointerEvents= "none";
 
     } else if (square7.textContent != "" && square7.textContent === square8.textContent && square7.textContent === square9.textContent) {
-        square7.style.backgroundColor = "red"
-        square8.style.backgroundColor = "red"
-        square9.style.backgroundColor = "red"
+        square7.style.backgroundColor = "green"
+        square8.style.backgroundColor = "green"
+        square9.style.backgroundColor = "green"
+
+        nomeDoVencedor()
+        parar.style.pointerEvents= "none";
 
     } else if (square1.textContent != "" && square1.textContent === square4.textContent && square1.textContent === square7.textContent) {
         square1.style.backgroundColor = "red"
@@ -156,34 +162,40 @@ function verificarGanhador () {
         square7.style.backgroundColor = "red"
 
         nomeDoVencedor()
+        parar.style.pointerEvents= "none";
 
     } else if (square5.textContent != "" && square5.textContent === square2.textContent && square8.textContent === square2.textContent) {
-        square2.style.backgroundColor = "red"
-        square5.style.backgroundColor = "red"
-        square8.style.backgroundColor = "red"
+        square2.style.backgroundColor = "green"
+        square5.style.backgroundColor = "green"
+        square8.style.backgroundColor = "green"
 
         nomeDoVencedor()
+        parar.style.pointerEvents= "none";
 
     } else if (square9.textContent != "" && square9.textContent === square3.textContent && square6.textContent === square3.textContent) {
-        square3.style.backgroundColor = "red"
-        square6.style.backgroundColor = "red"
-        square9.style.backgroundColor = "red"
+        square3.style.backgroundColor = "green"
+        square6.style.backgroundColor = "green"
+        square9.style.backgroundColor = "green"
 
         nomeDoVencedor()
+        parar.style.pointerEvents= "none";
 
     } else if (square1.textContent != "" && square1.textContent === square5.textContent && square1.textContent === square9.textContent) {
-        square1.style.backgroundColor = "red"
-        square5.style.backgroundColor = "red"
-        square9.style.backgroundColor = "red"
+        square1.style.backgroundColor = "green"
+        square5.style.backgroundColor = "green"
+        square9.style.backgroundColor = "green"
 
         nomeDoVencedor()
+        parar.style.pointerEvents= "none";
 
     } else if (square5.textContent != "" && square5.textContent === square3.textContent && square7.textContent === square3.textContent) {
-        square3.style.backgroundColor = "red"
-        square5.style.backgroundColor = "red"
-        square7.style.backgroundColor = "red"
+        square3.style.backgroundColor = "green"
+        square5.style.backgroundColor = "green"
+        square7.style.backgroundColor = "green"
 
         nomeDoVencedor()
+        parar.style.pointerEvents= "none";
+        
     } else if (square1.textContent != "" && square2.textContent != "" && square3.textContent != "" && square4.textContent != "" && square5.textContent != "" && square6.textContent != "" && 
     square7.textContent != "" && square8.textContent != "" && square9.textContent != "") {
         let empate = document.createElement('h3')
