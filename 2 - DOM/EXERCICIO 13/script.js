@@ -195,7 +195,7 @@ function verificarGanhador () {
 
         nomeDoVencedor()
         parar.style.pointerEvents= "none";
-        
+
     } else if (square1.textContent != "" && square2.textContent != "" && square3.textContent != "" && square4.textContent != "" && square5.textContent != "" && square6.textContent != "" && 
     square7.textContent != "" && square8.textContent != "" && square9.textContent != "") {
         let empate = document.createElement('h3')
