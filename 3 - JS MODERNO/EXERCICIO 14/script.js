@@ -43,6 +43,32 @@ const mediana = (...numbers) => {
     
 }
 
+
+    const moda = (...numbers) => {
+        const counts = {};
+        for (const number of numbers) {
+            if (!counts[number]) {
+            counts[number] = 1;
+            } else {
+            counts[number] += 1;
+            }
+        }
+
+        // Find the number with the highest count.
+        let maxCount = 0;
+        let mode = null;
+        for (const [number, count] of Object.entries(counts)) {
+            if (count > maxCount) {
+            maxCount = count;
+            mode = number;
+            }
+        }
+
+        return mode;
+    }
+
+
 //console.log(mediaAritmetica(5, 8,10,15,25,58))
 //console.log(mediaPonderada({n:10, p:5}, {n:50, p:60}))
-console.log(mediana(15, 80, 95, 84, 55, 56, 1))
+//console.log(mediana(15, 80, 95, 84, 55, 56, 1))
+console.log(moda(15, 80, 15, 84, 15, 56, 1))
