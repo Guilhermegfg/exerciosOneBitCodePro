@@ -63,7 +63,7 @@ const mediana = (...numbers) => {
             mode = number;
             }
         }
-
+ 
         return mode;
     }
 
