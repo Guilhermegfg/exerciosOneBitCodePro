@@ -12,6 +12,6 @@ export class Mage extends Character {
     }
 
     Curar (alvo) {
-        alvo.vida += this.magia
+        alvo.vida += this.magia * 2
     }
 }
