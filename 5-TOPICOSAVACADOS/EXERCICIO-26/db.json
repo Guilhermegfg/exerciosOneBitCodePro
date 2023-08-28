@@ -1,11 +1,6 @@
 {
   "transactions": [
     {
-      "name": "tgtr",
-      "amount": 34,
-      "id": 1
-    },
-    {
       "name": "Salário",
       "amount": 3200,
       "id": 3
