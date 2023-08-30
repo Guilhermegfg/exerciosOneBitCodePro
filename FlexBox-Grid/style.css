@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 400px;
+    height: 220px;
+    border-radius: 5px;
+}
+
+h3 {
+    color: gray;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: gray;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    padding: 10px 20px;
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "cards produtos"
+    "cards produtos"
+    "cards produtos"
+    ;
+}
+
+main p {
+    width: 90%;
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    text-align: center;
+    padding: 32px 0;
+}
+
+
+.cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "boxe crossfit natacao"
+    "roupas basquete corrida"
+    "surf trilha tenis"
+    ;
+
+    padding: 20px 32px;
+
+
+}
+
+.card img {
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.card {
+    border-radius: 20px;
+    max-width: 400px;
+}
+
+#boxe {
+    grid-area: boxe;
+}
+
+#crossfit {
+    grid-area: crossfit;
+}
+
+#natacao {
+    grid-area: natacao;
+}
+
+#roupas {
+    grid-area: roupas;
+}
+
+#basquete {
+    grid-area: basquete;
+}
+
+#corrida {
+    grid-area: corrida;
+}
+
+#surf {
+    grid-area: surf;
+}
+
+#trilha {
+    grid-area: trilha;
+}
+
+#tenis {
+    grid-area: tenis;
+}
+
+
+
+.produtos {
+    grid-area: produtos;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 32px;
+    background-color: gray;
+    border-radius: 10px;
+    gap: 12px;
+    color: white;
+    text-align: center;
+}
+
+
+
+.produtos img {
+    width: 300px;
+    height: 140px;
+}
+
+h4 {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+
+
+
+ footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    padding: 10px 20px;
+ }
+
+ footer button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+ }
+
+ @media (max-width:1700px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "boxe crossfit"
+        "natacao roupas"
+        "basquete corrida"
+        "surf trilha"
+        "tenis tenis";
+
+        gap: 24px 0;
+
+        
+    }
+
+    .cards img {
+        width: 450px;
+        height: 250px;
+    }
+
+    .produtos img {
+        width: 350px;
+        height: 200px;
+    }
+ }
+
+ @media (max-width:1450px) {
+    .cards {
+        grid-template-columns: 1fr;
+        grid-template-areas:"boxe" "crossfit" "natacao" "roupas" "basquete" "corrida" "surf" "trilha" "tenis";
+        margin: auto;
+        
+
+        
+    }
+ }
+
+ @media (max-width:1000px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "cabecalho cabecalho"
+        "cards cards"
+        "produtos produtos"
+        ;
+    }
+
+    .produtos {
+        width: 100%;
+    }
+
+    header, footer {
+        flex-direction: column;
+        padding-bottom: 32px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+ }
+
+ @media (max-width:650px) {
+    .cards img {
+        width: 350px;
+    }
+
+    header div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cabecalho {
+        width: 90%;
+        margin: auto;
+    }
+ }
+
+ @media (max-width:450px) {
+    img,
+    .cards img,
+    .produtos img {
+        width: 250px;
+        height: auto;
+    }
+
+    .cards {
+        width: 260px;
+    }
+
+    .card p {
+        width: fit-content;
+    }
+
+
+ }
+
+ 
