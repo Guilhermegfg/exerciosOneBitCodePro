@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+main {
+    background-image: url(../assets/backgroundLp.png);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+
+
+}
+
+button{
+    color: $button-color;
+}
+
+section {
+    width: 500px;
+    background-color: $background-color;
+    border-radius: 10px;
+}
+
+img {
+    width: 185px;
+}
+
+
+@media (max-width:550px) {
+    main {
+        height: auto;
+    }
+
+    section {
+        width: auto;
+    }
+
+
+}
