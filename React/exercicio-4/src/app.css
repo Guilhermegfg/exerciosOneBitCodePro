@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(49, 49, 49);
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.buttons {
+    display: flex;
+    gap: 16px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+}
